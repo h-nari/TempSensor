@@ -25,8 +25,10 @@ class TempSensor {
 
   virtual bool begin(void)  {return false;}
   virtual bool getTemperature(float *pTemp) {return false;}
+  virtual bool getHumidity(float *pHumidity) {return false;}
   virtual bool led(bool on) {return false;}
   virtual uint32_t getCapability(void) {return 0;}
+  void setAddr(uint8_t addr) {m_addr = addr;}
   void setVerbose(uint8_t v) {m_verbose = v;}
 };
 
